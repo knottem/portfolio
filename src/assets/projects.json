@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Weather App",
+    "name_sv": "Väder app",
+    "description": "Real-time weather data for Swedish towns. Using the Weather API as backend.",
+    "description_sv": "Väderdata i realtid för svenska städer. Använder Väder API som backend",
+    "link": "https://weather.knotten.net",
+    "github": "https://github.com/knottem/weatherfrontend"
+  },
+  {
+    "name": "Weather API",
+    "name_sv": "Väder-API",
+    "description": "Backend API merging data from SMHI, YR, and FMI.",
+    "description_sv": "Backend-API som slår samman data från SMHI, YR och FMI.",
+    "link": null,
+    "github": "https://github.com/knottem/weatherapi"
+  },
+  {
+    "name": "Portfolio Website",
+    "name_sv": "Portfölj Hemsida",
+    "description": "This is the website you're currently viewing! A super simple portfolio website built with Angular to showcase some of my projects and skills.",
+    "description_sv": "Detta är webbplatsen du för närvarande tittar på! En superenkel portfölj hemsida byggd med Angular för att visa upp några av mina projekt och färdigheter.",
+    "link": "https://knotten.net",
+    "github": null
+  },
+  {
+    "name": "Advent-of-Code",
+    "name_sv": "Advent-of-Code",
+    "description": "My solutions to Advent of Code, most of the solutions are done in Java, Kotlin, or TypeScript",
+    "description_sv": "Mina lösningar på Advent of Code, de flesta är gjorda i Java, Kotlin eller TypeScript",
+    "link": null,
+    "github": "https://github.com/knottem/Advent-of-Code"
+  },
+  {
+    "name": "Node-Api-Server",
+    "name_sv": "Node-Api-Server",
+    "description": "A simple Node.js server that returns JSON data, showcasing API development and JSON handling",
+    "description_sv": "En enkel Node.js-server som returnerar JSON-data, som visar API-utveckling och JSON-hantering",
+    "link": null,
+    "github": "https://github.com/knottem/Node-Api-Server"
+  }
+]

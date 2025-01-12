@@ -1,0 +1,37 @@
+{
+  "about": {
+    "title": "Om Mig",
+    "intro": "Efter att ha arbetat som brevbärare i 15 år beslutade jag mig för att byta karriär och bli utvecklare.",
+    "description_parts": {
+      "part1": "Jag har alltid haft ett stort intresse för datorer. Jag gillar att pyssla med min hemserver och att lära mig nya saker om teknik.",
+      "part2": "De flesta av mina färdigheter är självlärda. Jag arbetar ständigt med egna projekt för att utvecklas och utmana mig själv.",
+      "part3": "Jag studerade backendutveckling med Java på Nackademin. Jag tog examen med fullständiga betyg, och du kan se mitt diplom här: <a href='https://diplom.nackademin.se/examensbevis-189557-javautvecklare-4283/?ref=direct-copy&zone=truecrt&lang=sv' target='_blank' class='text-blue-500 underline hover:text-blue-700'>Nackademin Diploma</a>.",
+      "part4": "När jag inte kodar tycker jag om att utforska ny teknik, vara ute i naturen och hålla mig uppdaterad om det senaste inom teknik."
+    },
+    "skills_title": "Viktiga Kompetenser"
+  },
+  "header": {
+    "title": "Portfölj",
+    "home": "Hem",
+    "about_me": "Om Mig",
+    "projects": "Mina Projekt",
+    "contact": "Kontakta Mig",
+    "dark_mode": "Mörkt Läge"
+  },
+  "hero": {
+    "part1": "Hej, Mitt namn är Erik Wallenius",
+    "part2": "Backend programmare som specializer inom Java",
+    "link": "Se Mina Projekt"
+  },
+  "contact": {
+    "contact": "Kontakta Mig",
+    "contact_message": "Tveka inte att höra av dig via e-post eller sociala medier.",
+    "email": "E-post",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "projects": {
+    "projects": "Mina Projekt",
+    "project": " Projekt"
+  }
+}
