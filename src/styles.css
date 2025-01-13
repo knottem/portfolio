@@ -7,3 +7,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 html {
   scroll-behavior: smooth;
 }
+
+.animated-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animated-section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
