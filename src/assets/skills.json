@@ -1,14 +1,17 @@
 {
   "skills": [
     "Java",
+    "Kotlin",
+    "TypeScript",
+    "Python",
     "Spring Boot",
     "REST APIs",
     "Docker",
     "MySQL",
-    "Redis",
     "GitHub Actions",
     "Angular",
     "Oracle DB",
-    "Openshift 4"
+    "Openshift 4",
+    "ArgoCD"
   ]
 }
