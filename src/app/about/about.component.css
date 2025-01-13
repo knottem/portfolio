@@ -1,0 +1,7 @@
+ul {
+  margin-left: 1rem; /* Add left margin for better alignment */
+  color: #555; /* Subtle text color for readability */
+}
+ul li {
+  margin-bottom: 1rem; /* Consistent spacing between items */
+}
