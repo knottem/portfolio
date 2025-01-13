@@ -14,7 +14,7 @@ This is a simple website I created to showcase some of my projects and skills. I
 
 ## Live Demo
 
-The website is **SOON** live at: [knotten.net](https://knotten.net) 
+The website is live at: [knotten.net](https://knotten.net) 
 
 ## Technologies Used
 
@@ -22,15 +22,4 @@ The website is **SOON** live at: [knotten.net](https://knotten.net)
 - **Tailwind CSS**
 - **TypeScript**
 - **ngx-translate** for language support
-
-## About Me
-
-I'm Erik Wallenius, a backend developer focusing on **Java** and **Spring Boot**. After 15 years as a mailman, I decided to switch careers and pursue my interest in technology. This site is a small part of my journey.
-
-## Contact
-
-You can reach me at:
-- **Email**: [knotten@knotten.net](mailto:knotten@knotten.net)
-- **GitHub**: [knottem](https://github.com/knottem)
-
 
