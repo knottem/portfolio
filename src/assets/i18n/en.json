@@ -1,0 +1,35 @@
+{
+  "about": {
+    "title": "About Me",
+    "description_parts": {
+      "part1": "After working as a mailman for 15 years, I decided to change paths and pursue a career in technology. I've always had a passion for computers, ever since I got my first one as a teenager. That passion evolved over the years into a strong interest in understanding how systems work. These days, I enjoy tinkering with my home server, hosting various self-managed services, and experimenting with new technologies to broaden my understanding.",
+      "part2": "Most of my skills are self-taught through consistent practice and personal projects. I believe in challenging myself to learn and grow, whether it's by building REST APIs or optimizing backend performance. These projects are not just a way for me to improve technically but also to develop a deeper understanding of the development lifecycle as a whole. My curiosity and determination to improve drive me to keep exploring and refining my craft.",
+      "part3": "To formalize my knowledge and gain industry-recognized skills, I attended Nackademin, where I studied backend development with a focus on Java and Spring Boot. The program was demanding, but I embraced the challenge and graduated with full scores. During my studies, I built several projects and gained hands-on experience with modern technologies and agile methodologies. You can view my diploma here: <a href='https://diplom.nackademin.se/examensbevis-189557-javautvecklare-4283/?ref=direct-copy&zone=truecrt&lang=en' target='_blank' class='text-blue-500 underline hover:text-blue-700'>Nackademin Diploma</a>.",
+      "part4": "Beyond coding, I like to stay active and take time away from the screen to balance my focus. I often explore new technologies for fun, keep up with the latest trends in the tech world, or go for walks to clear my head. I enjoy being outdoors, which helps me recharge and return to projects with fresh energy and perspective."
+    },
+    "skills_title": "Key Skills"
+  },
+  "header": {
+    "title": "Portfolio",
+    "home": "Home",
+    "about_me": "About Me",
+    "projects": "My Projects",
+    "contact": "Contact Me",
+    "dark_mode": "Dark Mode"
+  },
+  "hero": {
+    "part1": "Hi, I'm Erik Wallenius",
+    "part2": "Backend Developer specializing in Java",
+    "link": "View My Projects"
+  },
+  "contact": {
+    "contact": "Contact Me",
+    "contact_message": "Feel free to reach out via email or connect on social media.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "projects":{
+    "projects": "My Projects"
+  }
+}

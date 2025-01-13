@@ -2,8 +2,8 @@
   {
     "name": "Weather App",
     "name_sv": "Väder app",
-    "description": "Real-time weather data for Swedish towns. Using the Weather API as backend.",
-    "description_sv": "Väderdata i realtid för svenska städer. Använder Väder API som backend",
+    "description": "Real-time weather data for Swedish towns. Using the Weather API as backend. Exists as both a website and an android app",
+    "description_sv": "Väderdata i realtid för svenska städer. Använder Väder API som backend. Existerar både som en hemsida och en android app",
     "link": "https://weather.knotten.net",
     "github": "https://github.com/knottem/weatherfrontend"
   },
@@ -20,8 +20,8 @@
     "name_sv": "Portfölj Hemsida",
     "description": "This is the website you're currently viewing! A super simple portfolio website built with Angular to showcase some of my projects and skills.",
     "description_sv": "Detta är webbplatsen du för närvarande tittar på! En superenkel portfölj hemsida byggd med Angular för att visa upp några av mina projekt och färdigheter.",
-    "link": "https://knotten.net",
-    "github": null
+    "link": null,
+    "github": "https://github.com/knottem/portfolio"
   },
   {
     "name": "Advent-of-Code",

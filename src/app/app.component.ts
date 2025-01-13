@@ -7,6 +7,7 @@ import {ProjectsComponent} from './projects/projects.component';
 import {ContactComponent} from './contact/contact.component';
 import {SectionService} from './section.service';
 import {TranslateService} from '@ngx-translate/core';
+import {CookieService} from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -18,20 +19,29 @@ export class AppComponent {
 
   title = "portfolio";
 
-  constructor(private sectionService: SectionService, private translate: TranslateService) {
+  constructor(private sectionService: SectionService,
+              private translate: TranslateService,
+              private cookieService: CookieService) {
+    this.initializeApp();
 
-    this.translate.setDefaultLang('en');
-    const browserLang = this.translate.getBrowserLang();
-    if(browserLang === 'en' || browserLang === 'sv') {
-      this.translate.use(browserLang);
+  }
+
+  private initializeApp(): void {
+    const savedLang = this.cookieService.get('language');
+    if (savedLang) {
+      this.translate.use(savedLang);
+    } else {
+      const browserLang = this.translate.getBrowserLang();
+      if (browserLang === 'en' || browserLang === 'sv') {
+        this.translate.use(browserLang);
+        this.cookieService.set('language', browserLang, { expires: 365, path: '/' });
+      } else {
+        this.translate.setDefaultLang('en');
+        this.translate.use('en');
+        this.cookieService.set('language', 'en', { expires: 365, path: '/' });
+      }
     }
-
   }
-
-  switchLanguage(lang: string): void {
-    this.translate.use(lang);
-  }
-
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
