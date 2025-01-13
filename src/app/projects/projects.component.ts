@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NgForOf, NgIf} from '@angular/common';
-import {TranslateService} from '@ngx-translate/core';
+import {TranslatePipe, TranslateService} from '@ngx-translate/core';
 import {ScrollInViewDirective} from '../shared/scroll-in-view.directive';
 
 @Component({
@@ -9,7 +9,8 @@ import {ScrollInViewDirective} from '../shared/scroll-in-view.directive';
   imports: [
     NgForOf,
     NgIf,
-    ScrollInViewDirective
+    ScrollInViewDirective,
+    TranslatePipe
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
