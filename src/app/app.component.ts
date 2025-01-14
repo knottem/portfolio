@@ -5,9 +5,9 @@ import {HeroComponent} from './hero/hero.component';
 import {AboutComponent} from './about/about.component';
 import {ProjectsComponent} from './projects/projects.component';
 import {ContactComponent} from './contact/contact.component';
-import {SectionService} from './section.service';
 import {TranslateService} from '@ngx-translate/core';
 import {CookieService} from 'ngx-cookie-service';
+import {SharedService} from './shared.service';
 
 @Component({
   selector: 'app-root',
@@ -19,26 +19,30 @@ export class AppComponent {
 
   title = "portfolio";
 
-  constructor(private sectionService: SectionService,
-              private translate: TranslateService,
-              private cookieService: CookieService) {
+  // Change these values for what language files you have
+  defaultLang = "en";
+  supportedLanguages = ['en', 'sv', 'es']
+
+  constructor(private translate: TranslateService,
+              private cookieService: CookieService,
+              private sharedService: SharedService) {
     this.initializeApp();
 
   }
 
   private initializeApp(): void {
     const savedLang = this.cookieService.get('language');
-    if (savedLang) {
+    if (savedLang && this.supportedLanguages.includes(savedLang)) {
       this.translate.use(savedLang);
     } else {
-      const browserLang = this.translate.getBrowserLang();
-      if (browserLang === 'en' || browserLang === 'sv') {
+      const browserLang = this.translate.getBrowserLang() || '';
+      if (this.supportedLanguages.includes(browserLang)) {
         this.translate.use(browserLang);
         this.cookieService.set('language', browserLang, { expires: 365, path: '/' });
       } else {
-        this.translate.setDefaultLang('en');
-        this.translate.use('en');
-        this.cookieService.set('language', 'en', { expires: 365, path: '/' });
+        this.translate.setDefaultLang(this.defaultLang);
+        this.translate.use(this.defaultLang);
+        this.cookieService.set('language', this.defaultLang, { expires: 365, path: '/' });
       }
     }
   }
@@ -68,7 +72,7 @@ export class AppComponent {
     });
 
     if (activeSection) {
-      this.sectionService.setActiveSection(activeSection);
+      this.sharedService.setActiveSection(activeSection);
     }
   }
 }
