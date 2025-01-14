@@ -9,11 +9,12 @@ import {ScrollInViewDirective} from '../shared/scroll-in-view.directive';
   imports: [
     NgForOf,
     NgIf,
-    ScrollInViewDirective,
-    TranslatePipe
+    TranslatePipe,
+    ScrollInViewDirective
   ],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  styleUrl: './projects.component.css',
+  standalone: true
 })
 export class ProjectsComponent {
   projects: any[] = [];
