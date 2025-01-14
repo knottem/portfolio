@@ -19,17 +19,19 @@
   },
   "hero": {
     "part1": "Hej, Mitt namn är Erik Wallenius",
-    "part2": "Backend programmare som specializer inom Java",
+    "part2": "Backend programmare som specialiserar inom Java",
     "link": "Se Mina Projekt"
   },
   "contact": {
-    "contact": "Kontakta Mig",
+    "title": "Kontakta Mig",
     "contact_message": "Tveka inte att höra av dig via e-post eller sociala medier.",
-    "email": "E-post",
-    "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "email": "E-post"
   },
   "projects": {
-    "projects": "Mina Projekt"
+    "projects": "Mina Projekt",
+    "text": "Här är några exempel på hobby projekt jag arbetar/arbetat med."
+  },
+  "footer": {
+    "image": "Bakgrundsbild av <a href='https://www.pexels.com/photo/wood-grain-82256/' target='_blank' class='text-blue-500 hover:underline'>tbee</a> från Pexels"
   }
 }

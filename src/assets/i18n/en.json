@@ -20,16 +20,18 @@
   "hero": {
     "part1": "Hi, I'm Erik Wallenius",
     "part2": "Backend Developer specializing in Java",
-    "link": "View My Projects"
+    "about": "More Info"
   },
   "contact": {
-    "contact": "Contact Me",
+    "title": "Contact Me",
     "contact_message": "Feel free to reach out via email or connect on social media.",
-    "email": "Email",
-    "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "email": "Email"
   },
   "projects":{
-    "projects": "My Projects"
+    "projects": "My Projects",
+    "text": "Here's a few examples of some hobby projects I work/worked on "
+  },
+  "footer":{
+    "image": "Background image by <a href='https://www.pexels.com/photo/wood-grain-82256/' target='_blank' class='text-blue-500 hover:underline'>tbee</a> on Pexels"
   }
 }
