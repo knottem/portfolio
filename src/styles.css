@@ -18,3 +18,7 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+footer a, section#about a {
+  @apply text-blue-500 underline hover:text-blue-700
+}

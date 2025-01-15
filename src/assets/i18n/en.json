@@ -4,7 +4,7 @@
     "description_parts": {
       "part1": "After working as a mailman for 15 years, I decided to change paths and pursue a career in technology. I've always had a passion for computers, ever since I got my first one as a teenager. That passion evolved over the years into a strong interest in understanding how systems work. These days, I enjoy tinkering with my home server, hosting various self-managed services, and experimenting with new technologies to broaden my understanding.",
       "part2": "Most of my skills are self-taught through consistent practice and personal projects. I believe in challenging myself to learn and grow, whether it's by building REST APIs or optimizing backend performance. These projects are not just a way for me to improve technically but also to develop a deeper understanding of the development lifecycle as a whole. My curiosity and determination to improve drive me to keep exploring and refining my craft.",
-      "part3": "I attended Nackademin, where I studied backend development with a focus on Java and Spring Boot. The program was demanding, but I embraced the challenge and graduated with full scores. During my studies, I built several projects and gained hands-on experience with modern technologies and agile methodologies. You can view my diploma here: <a href='https://diplom.nackademin.se/examensbevis-189557-javautvecklare-4283/?ref=direct-copy&zone=truecrt&lang=en' target='_blank' class='text-blue-500 underline hover:text-blue-700'>Nackademin Diploma</a>.",
+      "part3": "I attended Nackademin, where I studied backend development with a focus on Java and Spring Boot. The program was demanding, but I embraced the challenge and graduated with full scores. During my studies, I built several projects and gained hands-on experience with modern technologies and agile methodologies. You can view my diploma here: <a href='https://diplom.nackademin.se/examensbevis-189557-javautvecklare-4283/?ref=direct-copy&zone=truecrt&lang=en' target='_blank'>Nackademin Diploma</a>.",
       "part4": "Beyond coding, I like to stay active and take time away from the screen to balance my focus. I often explore new technologies for fun, keep up with the latest trends in the tech world, or go for walks to clear my head. I enjoy being outdoors, which helps me recharge and return to projects with fresh energy and perspective."
     },
     "skills_title": "Key Skills"
@@ -32,6 +32,6 @@
     "text": "Here's a few examples of some hobby projects I work/worked on "
   },
   "footer":{
-    "image": "Background image by <a href='https://www.pexels.com/photo/wood-grain-82256/' target='_blank' class='text-blue-500 hover:underline'>tbee</a> on Pexels"
+    "image": "Background image by <a href='https://www.pexels.com/photo/wood-grain-82256/' target='_blank'>tbee</a> on Pexels"
   }
 }

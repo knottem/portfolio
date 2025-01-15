@@ -4,7 +4,7 @@
     "description_parts": {
       "part1": "Efter att ha arbetat som brevbärare i 15 år bestämde jag mig för att byta karriär och satsa på en framtid inom teknik. Jag har alltid haft ett stort intresse för datorer, ända sedan jag fick min första som tonåring. Det intresset utvecklades med tiden till en stark nyfikenhet på hur system fungerar. Numera tycker jag om att experimentera med min hemserver, där jag hanterar egna tjänster och testar nya teknologier för att utöka min förståelse.",
       "part2": "De flesta av mina färdigheter är självlärda genom regelbundet arbete och personliga projekt. Jag tror på att utmana mig själv för att lära och växa, oavsett om det handlar om att bygga REST-API:er eller optimera backend-prestanda. Dessa projekt är inte bara ett sätt att förbättra mig tekniskt utan också att utveckla en djupare förståelse för hela utvecklingscykeln. Min nyfikenhet och strävan efter att bli bättre driver mig att fortsätta utforska och finslipa mina kunskaper.",
-      "part3": "Jag gick en utbildning på Nackademin, där jag studerade backendutveckling med fokus på Java och Spring Boot. Programmet var krävande, men jag tog mig an utmaningen och tog examen med fullständiga betyg. Under mina studier byggde jag flera projekt och fick praktisk erfarenhet av moderna teknologier och agila metoder. Du kan se mitt diplom här: <a href='https://diplom.nackademin.se/examensbevis-189557-javautvecklare-4283/?ref=direct-copy&zone=truecrt&lang=en' target='_blank' class='text-blue-500 underline hover:text-blue-700'>Nackademin Diploma</a>.",
+      "part3": "Jag gick en utbildning på Nackademin, där jag studerade backendutveckling med fokus på Java och Spring Boot. Programmet var krävande, men jag tog mig an utmaningen och tog examen med fullständiga betyg. Under mina studier byggde jag flera projekt och fick praktisk erfarenhet av moderna teknologier och agila metoder. Du kan se mitt diplom här: <a href='https://diplom.nackademin.se/examensbevis-189557-javautvecklare-4283/?ref=direct-copy&zone=truecrt&lang=en' target='_blank'>Nackademin Diploma</a>.",
       "part4": "Utanför kodandet tycker jag om att hålla mig aktiv och ta pauser från skärmen för att balansera mitt fokus. Jag utforskar ofta nya teknologier för skojs skull, håller mig uppdaterad om de senaste trenderna inom teknikvärlden eller tar en promenad för att rensa tankarna. Jag tycker om att vara utomhus, vilket hjälper mig att ladda om och återvända till projekt med ny energi och perspektiv."
     },
     "skills_title": "Viktiga Kompetenser"
@@ -32,6 +32,6 @@
     "text": "Här är några exempel på hobby projekt jag arbetar/arbetat med."
   },
   "footer": {
-    "image": "Bakgrundsbild av <a href='https://www.pexels.com/photo/wood-grain-82256/' target='_blank' class='text-blue-500 hover:underline'>tbee</a> från Pexels"
+    "image": "Bakgrundsbild av <a href='https://www.pexels.com/photo/wood-grain-82256/' target='_blank'>tbee</a> från Pexels"
   }
 }
