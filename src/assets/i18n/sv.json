@@ -20,7 +20,7 @@
   "hero": {
     "part1": "Hej, Mitt namn är Erik Wallenius",
     "part2": "Backend programmare som specialiserar inom Java",
-    "link": "Se Mina Projekt"
+    "about": "Mer information"
   },
   "contact": {
     "title": "Kontakta Mig",
