@@ -12,6 +12,7 @@ export class SharedService {
   private cookieName = 'language';
 
   // Supported languages
+  private defaultLanguage: string = 'sv';
   private supportedLanguages: string[] = ['en', 'sv'];
 
   // Active Section
@@ -24,35 +25,35 @@ export class SharedService {
 
   constructor(private translate: TranslateService,
               private cookieService: CookieService,
-              private http: HttpClient,) {
-    const savedLang = this.cookieService.get(this.cookieName) || 'en';
-    this.translate.setDefaultLang('en');
-    this.translate.use(savedLang);
-    this.languageSubject.next(savedLang);
-  }
+              private http: HttpClient) {}
 
   setActiveSection(section: string) {
     this.activeSectionSubject.next(section);
   }
 
+  initializeLanguage() {
+    let savedLang = this.cookieService.get('language');
+    if (!savedLang && !this.supportedLanguages.includes(savedLang)) {
+      savedLang = this.defaultLanguage;
+    }
+    this.switchLanguage(savedLang);
+  }
+
   switchLanguage(lang: string): void {
-    if (lang !== this.getCurrentLanguage()) {
       this.languageSubject.next(lang);
       this.cookieService.set(this.cookieName, lang, { expires: 365, path: '/' });
       this.translate.use(lang);
-    }
   }
 
   getSupportedLanguages(): string[] {
     return this.supportedLanguages;
   }
 
-  getCurrentLanguage(): string {
-    return this.languageSubject.getValue();
-  }
-
   getLinks(): Observable<any> {
     return this.http.get('/assets/links.json');
   }
+
+
+
 
 }
