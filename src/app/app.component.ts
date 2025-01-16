@@ -5,46 +5,27 @@ import {HeroComponent} from './hero/hero.component';
 import {AboutComponent} from './about/about.component';
 import {ProjectsComponent} from './projects/projects.component';
 import {ContactComponent} from './contact/contact.component';
-import {TranslateService} from '@ngx-translate/core';
-import {CookieService} from 'ngx-cookie-service';
 import {SharedService} from './shared.service';
 
 @Component({
   selector: 'app-root',
   imports: [HeaderComponent, FooterComponent, HeroComponent, AboutComponent, ProjectsComponent, ContactComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: `
+    <app-header></app-header>
+    <app-hero id="hero"></app-hero>
+    <app-about id="about"></app-about>
+    <app-projects id="projects"></app-projects>
+    <app-contact id="contact"></app-contact>
+    <app-footer></app-footer>
+  `,
+  styles: []
 })
 export class AppComponent {
 
   title = "portfolio";
 
-  // Change these values for what language files you have
-  defaultLang = "en";
-  supportedLanguages = ['en', 'sv', 'es']
-
-  constructor(private translate: TranslateService,
-              private cookieService: CookieService,
-              private sharedService: SharedService) {
-    this.initializeApp();
-
-  }
-
-  private initializeApp(): void {
-    const savedLang = this.cookieService.get('language');
-    if (savedLang && this.supportedLanguages.includes(savedLang)) {
-      this.translate.use(savedLang);
-    } else {
-      const browserLang = this.translate.getBrowserLang() || '';
-      if (this.supportedLanguages.includes(browserLang)) {
-        this.translate.use(browserLang);
-        this.cookieService.set('language', browserLang, { expires: 365, path: '/' });
-      } else {
-        this.translate.setDefaultLang(this.defaultLang);
-        this.translate.use(this.defaultLang);
-        this.cookieService.set('language', this.defaultLang, { expires: 365, path: '/' });
-      }
-    }
+  constructor(private sharedService: SharedService) {
+    this.sharedService.initializeLanguage();
   }
 
   @HostListener('window:scroll', [])
