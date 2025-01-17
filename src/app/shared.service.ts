@@ -10,10 +10,11 @@ import {HttpClient} from '@angular/common/http';
 export class SharedService {
 
   private cookieName = 'language';
+  private defaultSection = 'home';
 
   // Supported languages
   private defaultLanguage: string = 'sv';
-  private supportedLanguages: string[] = ['en', 'sv'];
+  private supportedLanguages: string[] = ['sv', 'en'];
 
   // Active Section
   private activeSectionSubject = new BehaviorSubject<string>('hero');
@@ -25,7 +26,9 @@ export class SharedService {
 
   constructor(private translate: TranslateService,
               private cookieService: CookieService,
-              private http: HttpClient) {}
+              private http: HttpClient) {
+    this.activeSectionSubject.next(this.defaultSection);
+  }
 
   setActiveSection(section: string) {
     this.activeSectionSubject.next(section);

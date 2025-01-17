@@ -14,13 +14,13 @@ import {SharedService} from '../shared.service';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  activeSection: string = 'hero';
+  activeSection: string = '';
+  currentLanguage: string = '';
+
   menuOpen: boolean = false;
 
   supportedLanguages: string[] = [];
   currentIndex: number = 0;
-  currentLanguage: string = 'en';
-
 
   constructor(private sharedService: SharedService,
               private elementRef: ElementRef) {}
