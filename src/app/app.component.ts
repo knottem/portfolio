@@ -1,7 +1,7 @@
 import {Component, HostListener} from '@angular/core';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
-import {HeroComponent} from './hero/hero.component';
+import {HomeComponent} from './hero/home.component';
 import {AboutComponent} from './about/about.component';
 import {ProjectsComponent} from './projects/projects.component';
 import {ContactComponent} from './contact/contact.component';
@@ -9,10 +9,10 @@ import {SharedService} from './shared.service';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, FooterComponent, HeroComponent, AboutComponent, ProjectsComponent, ContactComponent],
+  imports: [HeaderComponent, FooterComponent, HomeComponent, AboutComponent, ProjectsComponent, ContactComponent],
   template: `
     <app-header></app-header>
-    <app-hero id="hero"></app-hero>
+    <app-home id="home"></app-home>
     <app-about id="about"></app-about>
     <app-projects id="projects"></app-projects>
     <app-contact id="contact"></app-contact>
