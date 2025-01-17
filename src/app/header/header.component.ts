@@ -16,32 +16,22 @@ import {SharedService} from '../shared.service';
 export class HeaderComponent {
   activeSection: string = '';
   currentLanguage: string = '';
-
+  supportedLanguages: { code: string; name: string; flag: string }[] = [];
   menuOpen: boolean = false;
-
-  supportedLanguages: string[] = [];
-  currentIndex: number = 0;
 
   constructor(private sharedService: SharedService,
               private elementRef: ElementRef) {}
 
   ngOnInit() {
     this.supportedLanguages = this.sharedService.getSupportedLanguages();
-    this.currentIndex = this.supportedLanguages.indexOf(this.currentLanguage);
-
-    this.sharedService.activeSection$.subscribe((section) => {
-      this.activeSection = section;
-    });
 
     this.sharedService.language$.subscribe((lang) => {
       this.currentLanguage = lang;
     });
-  }
 
-  toggleLanguage(): void {
-    const newLang =
-      this.supportedLanguages[(this.supportedLanguages.indexOf(this.currentLanguage) + 1) % this.supportedLanguages.length];
-    this.sharedService.switchLanguage(newLang);
+    this.sharedService.activeSection$.subscribe((section) => {
+      this.activeSection = section;
+    });
   }
 
   switchLanguage(lang: string): void {

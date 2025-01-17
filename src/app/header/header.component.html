@@ -1,55 +1,40 @@
 <nav class="bg-gray-100 p-4 fixed top-0 w-full z-10">
   <div class="container mx-auto flex justify-between items-center">
-    <!-- Title -->
+
     <a href="#home" class="text-gray-800 font-bold text-xl">{{ 'header.title' | translate }}</a>
 
-    <!-- Desktop Navigation Links -->
     <ul class="hidden md:flex space-x-4 text-gray-800">
       <li>
-        <a
-          href="#home"
-          class="py-2 px-4 rounded hover:bg-gray-600 hover:text-white"
-          [class.font-semibold]="activeSection === 'home'" >
-          {{ 'header.home' | translate }}
-        </a>
+        <a href="#home" class="nav-link" [class.font-semibold]="activeSection === 'home'">{{'header.home' | translate}}</a>
       </li>
       <li>
-        <a
-          href="#about"
-          [class.font-semibold]="activeSection === 'about'"
-          class="text-gray-800 py-2 px-4 rounded hover:bg-gray-600 hover:text-white">
-          {{ 'header.about_me' | translate }}
-        </a>
+        <a href="#about" [class.font-semibold]="activeSection === 'about'" class="nav-link">{{'header.about_me' | translate}}</a>
       </li>
       <li>
-        <a
-          href="#projects"
-          [class.font-bold]="activeSection === 'projects'"
-          class="text-gray-800 py-2 px-4 rounded hover:bg-gray-600 hover:text-white">
-          {{ 'header.projects' | translate }}
-        </a>
+        <a href="#projects" [class.font-bold]="activeSection === 'projects'" class="nav-link">{{'header.projects' | translate}}</a>
       </li>
       <li>
-        <a
-          href="#contact"
-          [class.font-bold]="activeSection === 'contact'"
-          class="text-gray-800 py-2 px-4 rounded hover:bg-gray-600 hover:text-white">
-          {{ 'header.contact' | translate }}
-        </a>
+        <a href="#contact" [class.font-bold]="activeSection === 'contact'" class="nav-link">{{'header.contact' | translate}}</a>
       </li>
     </ul>
 
-    <!-- Language Toggle Button for Desktop -->
-    <button
-      (click)="toggleLanguage()"
-      class="hidden md:inline-block bg-gray-200 text-gray-800 py-1 px-3 rounded shadow">
-      {{ currentLanguage.toUpperCase() }}
-    </button>
+    <!-- Desktop Language Selector -->
+    <div class="hidden md:flex items-center space-x-4">
+      <button
+        *ngFor="let lang of supportedLanguages"
+        [class.active]="lang.code === currentLanguage"
+        class="language-button"
+        (click)="switchLanguage(lang.code)"
+      >
+        <span class="fi" [ngClass]="'fi-' + lang.flag"></span>
+        <span>{{ lang.name }}</span>
+      </button>
+    </div>
 
     <!-- Hamburger Menu Button for Mobile -->
     <button
       class="text-gray-800 flex flex-col items-center justify-center md:hidden focus:outline-none"
-      (click)="menuOpen = !menuOpen">
+      (click)="toggleMenu()">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
@@ -60,32 +45,30 @@
   <!-- Mobile Dropdown -->
   <ul
     [ngClass]="menuOpen ? 'block' : 'hidden'"
-    (click)="toggleMenu()"
-    class="absolute top-12 right-4 bg-gray-100 rounded-lg shadow-md text-gray-800 md:hidden ">
-    <li><a href="#hero" class="block py-2 px-4 hover:bg-gray-400">{{ 'header.home' | translate }}</a></li>
-    <li><a href="#about" class="block py-2 px-4 hover:bg-gray-400">{{ 'header.about_me' | translate }}</a></li>
-    <li><a href="#projects" class="block py-2 px-4 hover:bg-gray-400">{{ 'header.projects' | translate }}</a></li>
-    <li><a href="#contact" class="block py-2 px-4 hover:bg-gray-400">{{ 'header.contact' | translate }}</a></li>
+    class="absolute top-12 right-4 bg-gray-100 rounded-lg shadow-md text-gray-800 md:hidden">
+      <li><a href="#home" class="block py-2 px-4" (click)="toggleMenu()">{{ 'header.home' | translate }}</a></li>
+      <li><a href="#about" class="block py-2 px-4" (click)="toggleMenu()">{{ 'header.about_me' | translate }}</a></li>
+      <li><a href="#projects" class="block py-2 px-4 " (click)="toggleMenu()">{{ 'header.projects' | translate }}</a></li>
+      <li><a href="#contact" class="block py-2 px-4" (click)="toggleMenu()">{{ 'header.contact' | translate }}</a></li>
 
     <!-- Divider -->
     <li class="border-t border-gray-400 my-2"></li>
 
-    <!-- Language Toggle for Mobile -->
+    <!-- Mobile Language Selector -->
     <li class="block py-2 px-4">
-      <div class="grid grid-cols-2 gap-2">
+      <div class="grid grid-cols-1 gap-2">
         <button
           *ngFor="let lang of supportedLanguages"
-          [class.bg-gray-500]="lang === currentLanguage"
-          [class.text-white]="lang === currentLanguage"
-          [class.bg-gray-200]="lang !== currentLanguage"
-          [class.text-gray-800]="lang !== currentLanguage"
-          class="py-1 px-3 rounded shadow hover:bg-gray-400 hover:text-white transition"
-          (click)="switchLanguage(lang)">
-          {{ lang.toUpperCase() }}
+          [class.active]="lang.code === currentLanguage"
+          class="language-button"
+          (click)="switchLanguage(lang.code)"
+        >
+          <span class="fi" [ngClass]="'fi-' + lang.flag"></span>
+          <span>{{ lang.name }}</span>
         </button>
       </div>
     </li>
   </ul>
-
 </nav>
+
 

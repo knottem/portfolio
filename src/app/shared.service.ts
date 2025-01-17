@@ -10,24 +10,25 @@ import {HttpClient} from '@angular/common/http';
 export class SharedService {
 
   private cookieName = 'language';
-  private defaultSection = 'home';
 
   // Supported languages
   private defaultLanguage: string = 'sv';
-  private supportedLanguages: string[] = ['sv', 'en'];
+  private supportedLanguages = [
+    { code: 'sv', name: 'Svenska', flag: 'se' },
+    { code: 'en', name: 'English', flag: 'gb' },
+  ];
 
   // Active Section
-  private activeSectionSubject = new BehaviorSubject<string>('hero');
+  private activeSectionSubject = new BehaviorSubject<string>('home');
   activeSection$ = this.activeSectionSubject.asObservable();
 
   // Translation/Language Logic
-  private languageSubject = new BehaviorSubject<string>('en');
+  private languageSubject = new BehaviorSubject<string>('');
   language$ = this.languageSubject.asObservable();
 
   constructor(private translate: TranslateService,
               private cookieService: CookieService,
               private http: HttpClient) {
-    this.activeSectionSubject.next(this.defaultSection);
   }
 
   setActiveSection(section: string) {
@@ -36,27 +37,28 @@ export class SharedService {
 
   initializeLanguage() {
     let savedLang = this.cookieService.get('language');
-    if (!savedLang && !this.supportedLanguages.includes(savedLang)) {
-      savedLang = this.defaultLanguage;
+    if (!savedLang || !this.supportedLanguages
+      .some(lang => lang.code === savedLang)) {
+      this.switchLanguage(this.defaultLanguage);
+    } else {
+      this.languageSubject.next(savedLang);
+      this.translate.use(savedLang);
     }
-    this.switchLanguage(savedLang);
+
   }
 
   switchLanguage(lang: string): void {
       this.languageSubject.next(lang);
-      this.cookieService.set(this.cookieName, lang, { expires: 365, path: '/' });
+      this.cookieService.set(this.cookieName, lang, { expires: 10, path: '/' });
       this.translate.use(lang);
   }
 
-  getSupportedLanguages(): string[] {
+  getSupportedLanguages() {
     return this.supportedLanguages;
   }
 
   getLinks(): Observable<any> {
     return this.http.get('/assets/links.json');
   }
-
-
-
 
 }

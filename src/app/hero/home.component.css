@@ -3,9 +3,3 @@
   url('/assets/images/pexels-tbee-14592-82256.jpg') no-repeat center center;
   background-size: cover;
 }
-
-mat-card {
-  width: 100%;
-  max-width: 600px;
-  text-align: center;
-}
