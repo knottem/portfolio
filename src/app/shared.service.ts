@@ -49,7 +49,7 @@ export class SharedService {
 
   switchLanguage(lang: string): void {
       this.languageSubject.next(lang);
-      this.cookieService.set(this.cookieName, lang, { expires: 10, path: '/' });
+      this.cookieService.set(this.cookieName, lang, { expires: 365, path: '/' });
       this.translate.use(lang);
   }
 
