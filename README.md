@@ -4,7 +4,6 @@ This is a simple website I created to showcase some of my projects and skills. I
 
 ## Features
 
-- Works well on both mobile and desktop.
 - Built with **Angular** and **Tailwind CSS**.
 - Includes sections like:
   - About Me
@@ -14,7 +13,7 @@ This is a simple website I created to showcase some of my projects and skills. I
 
 ## Live Demo
 
-The website is live at: [knotten.net](https://knotten.net) 
+The website is live at: [knotten.net](https://knotten.net)
 
 ## Technologies Used
 
