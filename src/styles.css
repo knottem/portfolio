@@ -3,20 +3,16 @@
 @tailwind utilities;
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url('/assets/images/pexels-tbee-14592-82256.jpg') no-repeat fixed;
+}
+
 html {
   scroll-behavior: smooth;
-}
-
-.animated-section {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.animated-section.in-view {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 footer a, section#about a {
