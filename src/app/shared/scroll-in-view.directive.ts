@@ -1,22 +1,50 @@
-import {Directive, ElementRef, HostListener, Renderer2} from '@angular/core';
+import {Directive, HostListener} from '@angular/core';
+import {SharedService} from '../shared.service';
 
 @Directive({
   selector: '[appScrollInView]'
 })
 export class ScrollInViewDirective {
-  private isAnimated = false; // Ensure the animation happens only once
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  private scrollTimeout: any = null;
+
+  constructor(private sharedService: SharedService) {}
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
-    const rect = this.el.nativeElement.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
+    if (this.scrollTimeout) return;
 
-    // Check if the section is entering the viewport
-    if (rect.top < windowHeight * 0.8 && !this.isAnimated) {
-      this.isAnimated = true; // Mark as animated to prevent re-triggering
-      this.renderer.addClass(this.el.nativeElement, 'in-view');
+    this.scrollTimeout = setTimeout(() => {
+      this.trackActiveSection();
+      this.scrollTimeout = null;
+    }, 50);
+  }
+
+  private trackActiveSection(): void {
+    const sections = document.querySelectorAll('section');
+    let activeSection: string | null = null;
+    let maxVisibleArea = 0;
+
+    sections.forEach((section, index) => {
+      const rect = section.getBoundingClientRect();
+      const visibleHeight = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+
+      // Handles footer section
+      if (index === sections.length - 1 && rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        activeSection = section.id;
+        return;
+      }
+
+      if (visibleHeight > 0 && visibleHeight > maxVisibleArea) {
+        maxVisibleArea = visibleHeight;
+        activeSection = section.id;
+      }
+    });
+
+    if (activeSection) {
+      console.log("New section: ", activeSection);
+      this.sharedService.setActiveSection(activeSection);
     }
   }
+
 }
