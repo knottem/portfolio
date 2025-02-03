@@ -1,20 +1,39 @@
 <nav class="bg-gray-100 p-4 fixed top-0 w-full z-10">
   <div class="container mx-auto flex justify-between items-center">
 
-    <a href="#home" class="text-gray-800 font-bold text-xl">{{ 'header.title' | translate }}</a>
+    <a href="#" (click)="scrollToSection('home'); $event.preventDefault();"
+       class="text-gray-800 font-bold text-xl">
+      {{ 'header.title' | translate }}
+    </a>
 
     <ul class="hidden md:flex space-x-4 text-gray-800">
       <li>
-        <a href="#home" class="nav-link" [class.font-semibold]="activeSection === 'home'">{{'header.home' | translate}}</a>
+        <a href="#" (click)="scrollToSection('home'); $event.preventDefault();"
+           [class.font-semibold]="activeSection === 'home'"
+           class="nav-link">
+          {{ 'header.home' | translate }}
+        </a>
       </li>
       <li>
-        <a href="#about" [class.font-semibold]="activeSection === 'about'" class="nav-link">{{'header.about_me' | translate}}</a>
+        <a href="#" (click)="scrollToSection('about'); $event.preventDefault();"
+           [class.font-semibold]="activeSection === 'about'"
+           class="nav-link">
+          {{ 'header.about_me' | translate }}
+        </a>
       </li>
       <li>
-        <a href="#projects" [class.font-bold]="activeSection === 'projects'" class="nav-link">{{'header.projects' | translate}}</a>
+        <a href="#" (click)="scrollToSection('projects'); $event.preventDefault();"
+           [class.font-semibold]="activeSection === 'projects'"
+           class="nav-link">
+          {{ 'header.projects' | translate }}
+        </a>
       </li>
       <li>
-        <a href="#contact" [class.font-bold]="activeSection === 'contact'" class="nav-link">{{'header.contact' | translate}}</a>
+        <a href="#" (click)="scrollToSection('contact'); $event.preventDefault();"
+           [class.font-semibold]="activeSection === 'contact'"
+           class="nav-link">
+          {{ 'header.contact' | translate }}
+        </a>
       </li>
     </ul>
 
@@ -46,10 +65,30 @@
   <ul
     [ngClass]="menuOpen ? 'block' : 'hidden'"
     class="absolute top-12 right-4 bg-gray-100 rounded-lg shadow-md text-gray-800 md:hidden">
-      <li><a href="#home" class="block py-2 px-4" (click)="toggleMenu()">{{ 'header.home' | translate }}</a></li>
-      <li><a href="#about" class="block py-2 px-4" (click)="toggleMenu()">{{ 'header.about_me' | translate }}</a></li>
-      <li><a href="#projects" class="block py-2 px-4 " (click)="toggleMenu()">{{ 'header.projects' | translate }}</a></li>
-      <li><a href="#contact" class="block py-2 px-4" (click)="toggleMenu()">{{ 'header.contact' | translate }}</a></li>
+      <li>
+        <a href="#" (click)="scrollToSection('home'); $event.preventDefault();"
+           class="block py-2 px-4">
+          {{ 'header.home' | translate }}
+        </a>
+      </li>
+      <li>
+        <a href="#" (click)="scrollToSection('about'); $event.preventDefault();"
+           class="block py-2 px-4">
+          {{ 'header.about_me' | translate }}
+        </a>
+      </li>
+      <li>
+        <a href="#" (click)="scrollToSection('projects'); $event.preventDefault();"
+           class="block py-2 px-4">
+          {{ 'header.projects' | translate }}
+        </a>
+      </li>
+      <li>
+        <a href="#" (click)="scrollToSection('contact'); $event.preventDefault();"
+           class="block py-2 px-4">
+          {{ 'header.contact' | translate }}
+        </a>
+      </li>
 
     <!-- Divider -->
     <li class="border-t border-gray-400 my-2"></li>
