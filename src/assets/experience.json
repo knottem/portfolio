@@ -1,0 +1,67 @@
+{
+  "work": [
+    {
+      "id": "work-1",
+      "title": "Mailman",
+      "org": "CityMail Sweden AB",
+      "location": "Hägersten, Stockholm, SE",
+      "start": "2008-09",
+      "end": "2022-02",
+      "summaryKey": "experience.entries.work_1.summary"
+    },
+    {
+      "id": "work-summer-1",
+      "title": "Mailman",
+      "org": "CityMail Sweden AB",
+      "location": "Hägersten, Stockholm, SE",
+      "start": "2023-06",
+      "end": "2023-08",
+      "summaryKey": "experience.entries.summer_nackademin"
+    },
+    {
+      "id": "work-summer-2",
+      "title": "Mailman",
+      "org": "CityMail Sweden AB",
+      "location": "Hägersten, Stockholm, SE",
+      "start": "2024-06",
+      "end": "2024-08",
+      "summaryKey": "experience.entries.summer_nackademin"
+    },
+    {
+      "id": "work-2",
+      "title": "Backend Developer",
+      "org": "Arbetsförmedlingen",
+      "location": "Stockholm, SE",
+      "start": "2025-03",
+      "end": null,
+      "summaryKey": "experience.entries.work_2.summary",
+      "tech": ["Java", "Spring Boot", "Podman", "OpenShift 4", "Oracle DB", "ArgoCD"]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "title": "Gymnasie utbildning",
+      "org": "IT-Gymnasiet",
+      "location": "Stockholm, SE",
+      "start": "2003-08",
+      "end": "2006-06",
+      "summary": "Gymnasieutbildning med inriktning IT"
+    },
+    {
+      "id": "edu-2",
+      "title": "Systemutvecklare Java",
+      "org": "Nackademin",
+      "location": "Stockholm, SE",
+      "start": "2022-08",
+      "end": "2024-06",
+      "summaryKey": "experience.entries.edu_2.summary",
+      "detailKeys": [
+        "experience.entries.edu_2.detail_1", "experience.entries.edu_2.detail_2"
+      ],
+      "link": "https://verify.trueoriginal.com/725F4E54-ADFB-9505-6BC6-E5503A9EBB5E/?ref=direct-copy",
+      "linkTextKey": "experience.entries.edu_2.link_text",
+      "tech": ["Java", "REST", "CI/CD", "Kotlin", "MySQL", "Docker"]
+    }
+  ]
+}

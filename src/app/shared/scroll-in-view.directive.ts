@@ -42,7 +42,6 @@ export class ScrollInViewDirective {
     });
 
     if (activeSection) {
-      console.log("New section: ", activeSection);
       this.sharedService.setActiveSection(activeSection);
     }
   }

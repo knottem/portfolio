@@ -6,14 +6,16 @@ import {AboutComponent} from './about/about.component';
 import {ProjectsComponent} from './projects/projects.component';
 import {ContactComponent} from './contact/contact.component';
 import {SharedService} from './shared.service';
+import {ExperienceComponent} from './experience/experience.component';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, FooterComponent, HomeComponent, AboutComponent, ProjectsComponent, ContactComponent],
+  imports: [HeaderComponent, FooterComponent, HomeComponent, AboutComponent, ProjectsComponent, ContactComponent, ExperienceComponent],
   template: `
     <app-header></app-header>
     <app-home id="home"></app-home>
     <app-about id="about"></app-about>
+    <app-experience id="experience"></app-experience>
     <app-projects id="projects"></app-projects>
     <app-contact id="contact"></app-contact>
     <app-footer></app-footer>

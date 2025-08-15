@@ -9,10 +9,45 @@
     },
     "skills_title": "Key Skills"
   },
+  "experience": {
+    "title": "Experience",
+    "filters": {
+      "all": "All",
+      "work": "Work",
+      "education": "Education"
+    },
+    "type": {
+      "work": "Work",
+      "education": "Education"
+    },
+    "actions": {
+      "show_more": "Show more",
+      "show_less": "Show less"
+    },
+    "period": {
+      "present": "Present"
+    },
+    "entries": {
+      "work_1": {
+        "summary": "Worked for 13 years as a mailman before I decided to swap careers"
+      },
+      "work_2": {
+        "summary": "Back-end development for public services, focusing on reliability and performance."
+      },
+      "edu_2": {
+        "summary": "Vocational education focused on Java development and modern backend practices.",
+        "detail_1": "Graduated with top marks; specialized in REST APIs and microservices.",
+        "detail_2": "Completed internships delivering production-grade services.",
+        "link_text": "View Diploma"
+      },
+      "summer_nackademin": "Summer job during my studies at Nackademin"
+    }
+  },
   "header": {
     "title": "Portfolio",
     "home": "Home",
     "about_me": "About Me",
+    "experience": "Experiences",
     "projects": "My Projects",
     "contact": "Contact Me",
     "dark_mode": "Dark Mode"

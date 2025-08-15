@@ -1,0 +1,94 @@
+<section id="experience" class="py-20 bg-gray-100" appScrollInView>
+  <div class="container mx-auto px-6 md:px-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+      {{ 'experience.title' | translate }}
+    </h2>
+
+    <div class="flex flex-wrap gap-3 mb-8">
+      <button
+        *ngIf="hasWork && hasEducation"
+        class="px-4 py-2 rounded-full shadow text-sm font-medium bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+        [class.ring-2]="activeFilter === 'all'"
+        (click)="setFilter('all')">
+        {{ 'experience.filters.all' | translate }}
+      </button>
+
+      <button
+        *ngIf="hasWork"
+        class="px-4 py-2 rounded-full shadow text-sm font-medium bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+        [class.ring-2]="activeFilter === 'work'"
+        (click)="setFilter('work')">
+        {{ 'experience.filters.work' | translate }}
+      </button>
+
+      <button
+        *ngIf="hasEducation"
+        class="px-4 py-2 rounded-full shadow text-sm font-medium bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
+        [class.ring-2]="activeFilter === 'education'"
+        (click)="setFilter('education')">
+        {{ 'experience.filters.education' | translate }}
+      </button>
+    </div>
+
+    <p *ngIf="loading" class="text-gray-600">Loading…</p>
+    <p *ngIf="!loading && error" class="text-red-600">{{ error }}</p>
+
+    <ol *ngIf="!loading && !error" class="relative border-s border-gray-200">
+      <li *ngFor="let item of filteredItems; trackBy: trackById" class="mb-10 ms-4">
+        <!-- Dot -->
+        <div class="absolute -start-1.5 mt-2 w-3 h-3 rounded-full bg-blue-500 ring-4 ring-blue-100"></div>
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900">{{ item.title }}</h3>
+            <p class="text-gray-600">
+              <span class="font-medium">{{ item.org }}</span>
+              <span *ngIf="item.location"> • {{ item.location }}</span>
+            </p>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center px-2 py-1 rounded-full text-xs bg-gray-200 text-gray-700">
+              {{ ('experience.type.' + item.type) | translate }}
+            </span>
+            <span class="text-sm text-gray-500">
+              {{ item.start }} — {{ item.end || ('experience.period.present' | translate) }}
+            </span>
+          </div>
+        </div>
+
+        <p class="mt-2 text-gray-700">
+          <ng-container *ngIf="item.summaryKey">
+            {{ item.summaryKey | translate }}
+          </ng-container>
+        </p>
+
+        <div *ngIf="item.tech?.length" class="mt-3 flex flex-wrap gap-2">
+          <span *ngFor="let t of item.tech"
+                class="text-xs px-2 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
+            {{ t }}
+          </span>
+        </div>
+
+        <button *ngIf="hasDetails(item)"
+                class="mt-3 text-sm underline text-blue-700 hover:no-underline"
+                (click)="toggle(item)">
+          {{ item.open ? ('experience.actions.show_less' | translate) : ('experience.actions.show_more' | translate) }}
+        </button>
+
+        <ul *ngIf="item.open" class="mt-3 list-disc ps-5 space-y-2 text-gray-700">
+          <ng-container *ngIf="item.detailKeys?.length">
+            <li *ngFor="let k of item.detailKeys">{{ k | translate }}</li>
+          </ng-container>
+          <li *ngIf="item.link && item.linkTextKey">
+            <a [href]="item.link" target="_blank" rel="noopener"
+               class="text-blue-700 underline hover:no-underline">
+              {{ item.linkTextKey | translate }}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+

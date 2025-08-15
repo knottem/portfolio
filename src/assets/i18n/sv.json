@@ -9,10 +9,45 @@
     },
     "skills_title": "Viktiga Kompetenser"
   },
+  "experience": {
+    "title": "Erfarenhet",
+    "filters": {
+      "all": "Alla",
+      "work": "Arbete",
+      "education": "Utbildning"
+    },
+    "type": {
+      "work": "Arbete",
+      "education": "Utbildning"
+    },
+    "actions": {
+      "show_more": "Visa mer",
+      "show_less": "Visa mindre"
+    },
+    "period": {
+      "present": "Pågående"
+    },
+    "entries": {
+      "work_1": {
+        "summary": "Arbetade som brevbärare i 13 år innan jag bestämde mig för att byta karriär"
+      },
+      "work_2": {
+        "summary": "Backendutveckling för offentliga tjänster med fokus på driftsäkerhet och prestanda."
+      },
+      "edu_2": {
+        "summary": "YH-utbildning med fokus på Javautveckling och moderna backendmetoder.",
+        "detail_1": "Utexaminerad med toppbetyg; specialisering på REST-API:er och mikrotjänster.",
+        "detail_2": "Genomförde praktik och levererade produktionsklara tjänster.",
+        "link_text": "Visa Diplom"
+      },
+      "summer_nackademin": "Sommarjobb under mina studier på Nackademin"
+    }
+  },
   "header": {
     "title": "Portfölj",
     "home": "Hem",
     "about_me": "Om Mig",
+    "experience": "Erfarenheter",
     "projects": "Mina Projekt",
     "contact": "Kontakta Mig",
     "dark_mode": "Mörkt Läge"
