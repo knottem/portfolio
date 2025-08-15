@@ -7,6 +7,7 @@ This is a simple website I created to showcase some of my projects and skills. I
 - Built with **Angular** and **Tailwind CSS**.
 - Includes sections like:
   - About Me
+  - Experiences
   - Projects
   - Contact
 - Supports multiple languages (English and Swedish) using ngx-translate.

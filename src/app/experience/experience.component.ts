@@ -42,7 +42,7 @@ export class ExperienceComponent {
   items: ExperienceItem[] = [];
   loading = true;
   error: string | null = null;
-  constructor(private http: HttpClient, private translate: TranslateService) {}
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
     this.http.get<{ work: ExperienceItemDto[]; education: ExperienceItemDto[] }>('/assets/experience.json')
