@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {ScrollInViewDirective} from "../shared/scroll-in-view.directive";
-import {TranslatePipe, TranslateService} from "@ngx-translate/core";
+import {TranslatePipe} from "@ngx-translate/core";
 import {CommonModule} from '@angular/common';
 import {HttpClient} from '@angular/common/http';
 
